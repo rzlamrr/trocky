@@ -36,7 +36,7 @@ WORKDIR {{ LibrariesPath }}
 RUN python3 -m pip install meson ninja
 
 RUN mkdir /opt/cmake \
-	&& curl -sSLo {{ CMAKE_FILE }} {{ GIT }}/Kitware/CMake/releases/download/v{{ CMAKE_VER }}/{{ CMAKE_FILE }}
+	&& curl -sSLo {{ CMAKE_FILE }} {{ GIT }}/Kitware/CMake/releases/download/v{{ CMAKE_VER }}/{{ CMAKE_FILE }} \
 	&& sh {{ CMAKE_FILE }} --prefix=/opt/cmake --skip-license \
 	&& ln -s /opt/cmake/bin/cmake /usr/local/bin/cmake \
 	&& rm {{ CMAKE_FILE }}
