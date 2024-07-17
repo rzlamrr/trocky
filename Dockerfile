@@ -1,4 +1,4 @@
-\{%- set GIT = "https://github.com" -%}
+{%- set GIT = "https://github.com" -%}
 {%- set GIT_SSH = "git@github.com:" -%}
 {%- set GIT_FREEDESKTOP = GIT ~ "/gitlab-freedesktop-mirrors" -%}
 {%- set QT = "6.7.2" -%}
